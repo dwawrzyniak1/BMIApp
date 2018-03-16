@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">BMI Application</string>
+    <string name="tv_height_m">Height [m]</string>
+    <string name="tv_height_inch">Height [inch]</string>
+    <string name="tv_bmi">BMI</string>
+    <string name="btn_result">count</string>
+    <string name="et_mass">Enter your mass</string>
+    <string name="tv_mass_kg">Mass [kg]</string>
+    <string name="tv_mass_lbs">Mass [lbs]</string>
+    <string name="et_height">Enter your height</string>
+    <string name="unit_kg_m">kg/m</string>
+    <string name="unit_lbs_inch">lbs/inch</string>
+    <string name="switch_start_name">Units:</string>
+    <string name="menu_item_author">Author</string>
+    <string name="menu_item_save">Save</string>
+    <string name="menu_item_back">Back</string>
+    <string name="author_name">Damian</string>
+    <string name="author_surname">Wawrzyniak</string>
+    <string name="toast_data_saved">Data saved</string>
+    <string name="toast_unit_changed_kg_m">Unit changed to kg/m</string>
+    <string name="toast_unit_changed_lbs_inch">Unit changed to lbs/inch</string>
+    <string name="about_author">Jestem studentem 2 roku Informatyki na Politechnice Wrocławskiej. Jestem zdolny i pracowity, posiadam niezwykłe umiejętności pracy w zespole. Znam dużo języków, w tym polski i angielski.</string>
+    <string name="title_activity_about_fullscreen">AboutFullscreenActivity</string>
+    <string name="input_error">Incorrect data</string>
+    <string name="underweight">You\'re underweight</string>
+    <string name="good_weight">You\'ve good BMI</string>
+    <string name="overweight">You\'re overweight</string>
+</resources>
