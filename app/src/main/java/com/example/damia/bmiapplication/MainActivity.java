@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TEXT_VIEW_RESULT_KEY = "result";
     private static final String EDIT_TEXT_HEIGHT_KEY = "height";
     private static final String EDIT_TEXT_MASS_KEY = "mass";
     private static final String SWITCH_STATE = "switchkey";
@@ -52,9 +51,6 @@ public class MainActivity extends AppCompatActivity {
         tvHeight = findViewById(R.id.tv_put_height);
         swUnits = findViewById(R.id.switch_unit);
     }
-
-    @Override
-    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -97,14 +93,12 @@ public class MainActivity extends AppCompatActivity {
         }else{
             changeUnitsToKgM(true);
         }
-        cleanEditTexts();
+        cleanInputs();
     }
 
     public void sendBMI(View view){
-        Intent intent = new Intent(this, DisplayBMIActivity.class);
         String result = calculateAndGetStringResult();
-        intent.putExtra(TEXT_VIEW_RESULT_KEY, result);
-        startActivity(intent);
+        DisplayBMIActivity.start(this, result);
     }
 
     public void cleanEditText(View view){
@@ -164,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         if(showInfo) showToast(R.string.toast_unit_changed_lbs_inch);
     }
 
-    private void cleanEditTexts() {
+    private void cleanInputs() {
         cleanEditText(etHeight);
         cleanEditText(etMass);
     }
@@ -177,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getValidResult(){
-        String result = mBMI.calculateBMI() == BMI.BMI_ERR_INPUT ? "Incorrect data" : Double.toString(mBMI.calculateBMI());
+        String result = mBMI.calculateBMI() == BMI.BMI_ERR_INPUT ? getString(R.string.input_error) : Double.toString(mBMI.calculateBMI());
         return result;
     }
 
